@@ -1,9 +1,12 @@
 const prompt = require('prompt-sync')();
 
-let y = prompt('Years: ');
-let m = prompt('Meses: ');
-let d = prompt('Dias: ');
+const yearsText = prompt('Years: ');
+const years = Number(yearsText);
+const monthsText = prompt('Meses: ');
+const months = Number(monthsText);
+const daysText = prompt('Dias: ');
+const days = Number(daysText);
 
-let dTotal = y*365+m*30+Number(d);
+const age = years*365+months*30+days;
 
-console.log(`${dTotal} days in ${y} years, ${m} months and ${d} days.`);
+console.log(`You've lived ${age} days in ${years} years, ${months} months and ${days} days.`);

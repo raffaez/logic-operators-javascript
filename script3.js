@@ -1,10 +1,12 @@
 const prompt = require('prompt-sync')();
 
-let sTotal = prompt(`Event's duration in seconds: `), aux=0;
+const durationText = prompt(`Event's duration in seconds: `);
+const duration = Number(durationText);
+let aux = 0;
 
-let h = sTotal/3600;
-aux = sTotal%3600;
-let m = aux/60;
-let s = aux%60;
+const hours = duration/3600;
+aux = duration%3600;
+const minutes = aux/60;
+const seconds = aux%60;
 
-console.log(`${Math.floor(h)}h ${Math.floor(m)}m ${Math.floor(s)}s`);
+console.log(`Event's duration: ${Math.floor(hours)}h ${Math.floor(minutes)}m ${Math.floor(seconds)}s`);

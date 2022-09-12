@@ -1,6 +1,14 @@
 const prompt = require('prompt-sync')();
 
-let a = prompt('A: '), b = prompt('B: '); c = prompt('C: ');
-let r = Math.pow(Number(a)+Number(b), 2), s = Math.pow(Number(b)+Number(c), 2), d = (r+s)/2;
+const aText = prompt('A: ');
+const a = Number(aText);
+const bText = prompt('B: ');
+const b = Number(bText);
+const cText = prompt('C: ');
+const c = Number(cText);
+
+const r = Math.pow(a+b, 2);
+const s = Math.pow(b+c, 2);
+const d = (r+s)/2;
 
 console.log(`${d} = (${r}+${s})/2`);
